@@ -14,9 +14,9 @@ public class Teacher {
         this.age = age;
     }
 
-    public Teacher() {
-
-    }
+//    public Teacher() {
+//
+//    }
 
     public String getName() {
         return name;
