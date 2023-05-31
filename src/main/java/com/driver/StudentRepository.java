@@ -9,9 +9,9 @@ import java.util.List;
 @Repository
 public class StudentRepository {
 
-    HashMap<String,Student> studentHashMap=new HashMap<>();
-    HashMap<String,Teacher> teacherHashMap=new HashMap<>();
-    HashMap<String, List<String>> pairHashMap=new HashMap<>();
+    private HashMap<String,Student> studentHashMap=new HashMap<>();
+    private HashMap<String,Teacher> teacherHashMap=new HashMap<>();
+    private HashMap<String, List<String>> pairHashMap=new HashMap<>();
 
     public void addStudent(Student student){
         studentHashMap.put(student.getName(),student);
@@ -25,7 +25,7 @@ public class StudentRepository {
     {
         if(pairHashMap.containsKey(teacher))
         {
-            pairHashMap.get(teacher).add(teacher);
+            pairHashMap.get(teacher).add(student);
         }
         else{
             List<String> list=new ArrayList<>();
@@ -34,6 +34,7 @@ public class StudentRepository {
         }
     }
     public Student getStudentByName(String name){
+
         return studentHashMap.get(name);
     }
 
